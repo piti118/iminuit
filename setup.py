@@ -20,6 +20,7 @@ class CoverageCommand(Command):
         assert os.getcwd() == self.cwd, 'Must be in package root: %s' % self.cwd
         os.system('nosetests --with-coverage --cover-erase --cover-package=iminuit --cover-html iminuit')
 
+
 # Static linking
 cwd = dirname(__file__)
 minuit_src = glob(join(cwd, 'Minuit/src/*.cxx'))
