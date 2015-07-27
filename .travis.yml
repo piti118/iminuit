@@ -32,7 +32,7 @@ matrix:
 
         # Extra build to compute coverage
         - python: 2.7
-          env: BUILD='COVERAGE'
+          env: BUILD=COVERAGE
 
 before_install:
   - if [[ $BUILD != NO_EXTRA_DEPS ]]; then pip install IPython numpy Cython matplotlib coverage; fi
