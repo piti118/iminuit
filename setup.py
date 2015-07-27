@@ -18,7 +18,7 @@ class CoverageCommand(Command):
         self.cwd = os.getcwd()
     def run(self):
         assert os.getcwd() == self.cwd, 'Must be in package root: %s' % self.cwd
-        os.system('nosetests --with-coverage --cover-erase --cover-package=iminuit --cover-html iminuit')
+        os.system('nosetests --with-coverage --cover-erase --cover-package=iminuit --cover-html iminuit --cover-min-percentage=90')
 
 
 # Static linking
